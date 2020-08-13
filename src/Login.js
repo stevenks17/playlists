@@ -1,14 +1,14 @@
 import React from 'react';
 import './Login.css';
-
+import { loginUrl } from './spotify'
 function Login() {
     return (
         <div className="login">       
             <img
-                src={require('/mnt/c/Development/Projects/playlists/src/Playlists.png')}
+                src={require('/mnt/c/Development/Projects/playlists/src/v3.png')}
                 alt=""
             />
-            <button> Login with your spotify account </button>
+            <a href={loginUrl}> LOGIN WITH SPOTIFY </a>
         </div>
     )
 }
