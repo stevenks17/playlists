@@ -6,7 +6,6 @@ function App() {
   return (
     <div className="app">
 
-      {/* Login with spotify button */}
 
       <Login />
 
