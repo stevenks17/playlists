@@ -2,8 +2,11 @@ export const initialState = {
     user: null,
     playlists: [],
     playing: false,
-    item: null
+    item: null,
+    token: null
 }
+
+// Action sent to reducer checks type and payload
 
 const reducer = (state, action) => {
     console.log(action)
@@ -13,6 +16,12 @@ const reducer = (state, action) => {
                 ...state, 
                 user: action.user
             }
+
+            case 'SET_TOKEN':
+                return {
+                    ...state,
+                    token: action.token
+                }
             default: 
                 return state
     }
