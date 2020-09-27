@@ -1,3 +1,6 @@
+###Playlists
+Playlists is a spotify clone with social login components to easily carry your playlists with you to any device.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
