@@ -7,7 +7,7 @@ function Login() {
     return (
         <div className="login">       
             <img
-                src={require('/mnt/c/Development/Projects/playlists/src/v3.png')}
+                src={require('/Users/stevenkumarsingh/Development/projects/playlists/src/v3.png')}
                 alt=""
             />
             <a href={loginUrl}> LOGIN WITH SPOTIFY </a>
