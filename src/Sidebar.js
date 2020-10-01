@@ -1,9 +1,18 @@
 import React from 'react'
+import SidebarOption from './SidebarOption'
 
 function Sidebar() {
     return (
         <div>
-            <img src="/mnt/c/Development/Projects/playlists/src/v3.png" alt="" />
+            <h1>Sidebar</h1>
+            <img className="sidebar__logo"
+             alt="" />
+
+             <SidebarOption title="Home" />
+             <SidebarOption title="Search" />
+             <SidebarOption title="Library" />
+
+
         </div>
     )
 }
