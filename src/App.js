@@ -6,7 +6,7 @@ import SpotifyWebApi from "spotify-web-api-js"
 import Player from './Player'
 import { useStateProviderValue} from './StateProvider'
 
-const spotify = new SpotifyWebApi()
+const s = new SpotifyWebApi()
 
 function App() {
   const [{ token }, dispatch] = useStateProviderValue()
@@ -15,10 +15,10 @@ function App() {
   useEffect(() => {
     const hash = getTokenFromUrl()
     window.location.hash = ""
-    let _token = hash.acces_token
+    let _token = hash.access_token
 
     if (_token) {
-      spotify.setAccessToken(_token)
+      s.setAccessToken(_token)
 
       dispatch ({
         type: 'SET_TOKEN',
@@ -27,7 +27,7 @@ function App() {
 
       
       
-      spotify.getMe().then(user => {
+      s.getMe().then(user => {
         dispatch({
           type: 'SET_USER',
           user,
@@ -35,14 +35,14 @@ function App() {
       })
     }
 
-  }, [])
+  }, [token, dispatch])
 
 
 
   return (
     <div className="app">
       {!token && <Login />}
-      {token && <Player spotify={spotify} />}
+      {token && <Player spotify={s} />}
     </div>
   );
 }
